@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
+header{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,0.9752275910364145) 59%);
+}
 
+span i{
+    font-size: 35px;
+    margin-bottom: 10px;
+    padding-top: 32px;
+}
 .navbar-nav{
     margin: 0 auto;
     font-family: 'Oswald', sans-serif;
@@ -13,14 +26,14 @@
 }
 
 .first{
-    background-color: #ddd;
+    
     height: 500px;
     display: flex;
     align-items: center;
 }
 
 .encontrar{
-    border: 1px solid red;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,5 +42,77 @@
     gap: 10px;
     margin-left: 30px;
     padding: 15px;
+    text-align: center;
+}
+
+.textos{
+    display: flex;
+    gap: 10px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+    
+    
+}
+
+.texto-informativo{
+    border: 2px solid blue;
+    border-radius: 1rem;
+}
+
+
+.card-anuncio {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.imoveis-proximos{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    width: 33vw;
+}
+
+.title-1{
+    font-size: 40px;
+    text-align: start;
+}
+.btn-mais{
+    margin-right: 30px;
+}
+
+.avaliacoes{
+    margin-top: 60px;
+}
+
+.title-av{
+    text-align: center;
+}
+
+.comentario-avaliacoes{
+    display: flex;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+}
+
+.buscar-imoveis{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgb(144, 144, 247);
+}
+
+ul li{
+    list-style: none;
+    font-size: small;
     text-align: center;
 }

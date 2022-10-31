@@ -1,77 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f030e38271.js" crossorigin="anonymous"></script>
 
-    <title>Residência Universitária</title>
+  <title>Residência Universitária</title>
 </head>
+
 <body>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+          class="d-inline-block align-text-top">
+
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Bucar imóveis</a>
+          <a class="nav-link" href="#">Anunciar</a>
+          <a class="nav-link" href="#">Sobre</a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <form class="container-fluid justify-content-end btn-login">
+      <button class="btn btn-outline-success me-2" type="button">Entrar</button>
+      <button class="btn btn-outline-success me-2" type="button">Cadastre-se</button>
+
+    </form>
+  </nav>
+
+  <header>
+
+    <!-- Primeira DIV -BUSCA POR CIDADE... -->
+
+    <div class="first">
+      <div class="encontrar">
+        <h2>Encontre uma galera para dividir o aluguel</h2>
+
+        <input type="text" placeholder="Buscar por cidade">
+        <input type="text" placeholder="Bairro">
+        <input type="text" placeholder="Alugue até">
+
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Número de quartos
+          </button>
+          <ul class="dropdown-menu">
+            <li>5+</li>
+            <li>4</li>
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+          </ul>
+        </div>
+        <button>Buscar imóveis</button>
+
+      </div>
+
+    </div>
+
+
+  </header>
+
+  <section class="textos">
+
+    <span class="texto-informativo"><i class="fa-solid fa-circle-dollar-to-slot"></i>
+      <p>Imóveis com preços baixospara você. Não importa onde você estude, encontre o lugar perfeito entre nossos
+        anúncios e usuários, de acordo com sua renda</p>
+    </span>
+    <span class="texto-informativo"><i class="fa-solid fa-circle-check"></i>
+      <p>Confie em quem mora com você. Para nós, é muito importante conhecer cada um dos nossos usuários. Conferimosas
+        avaliações,perfis e documentações, assim, você sempre sabecom quem vai morar e pode negociar com os estudantes
+        de forma segura na nossa plataforma.</p>
+    </span>
+    <span class="texto-informativo"><i class="fa-solid fa-building-columns"></i>
+      <p>Procure, clique e ache!
+        Encontrar uma turma para dividir o aluguel nunca foi tão fácil! Graças à nossa tecnologia e à simplicidade você tem a oportunidade de estar mais pertinho do seu sonho universitário.
+      </p>
+    </span>
+
+  </section>
+
+  <h5>Imóveis próximos a você: </h5>
+  <section class="imoveis-proximos">
+
+    <div class="card">
+      <img src="img/casa1.jpg" class="card-img-top" alt="...">
     
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                
-              </a>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Bucar imóveis</a>
-              <a class="nav-link" href="#">Anunciar</a>
-              <a class="nav-link" href="#">Sobre</a>
-              
-              
-            </div>
-           
+      <div class="card-body">
+        <h5 class="card-title">Casa Germinada</h5>
+        <p class="card-text">Moro sozinho e estou alugando os quartos para estudantes</p>
+        <h6>2 quartos<span>- Belo Horizonte</span> </h6>
+        <i class="card-anuncio">R$ 300,00</i>
+        <br>
+        <a href="#" class="btn btn-primary">Fiquei Interessado!</a><br>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/casa1.jpg" class="card-img-top" alt="...">
+    
+      <div class="card-body">
+        <h5 class="card-title">Casa próximo a PUC SG</h5>
+        <p class="card-text">Alugo 3 quartos para estudantes da PUC São Gabriel. Próximo à ponto de ônibus.</p>
+        <h6>3 quartos<span>- Belo Horizonte</span> </h6>
+        <i class="card-anuncio">R$ 300,00</i>
+        <br>
+        <a href="#" class="btn btn-primary">Fiquei Interessado!</a><br>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/casa1.jpg" class="card-img-top" alt="...">
+    
+      <div class="card-body">
+        <h5 class="card-title">Casa Germinada</h5>
+        <p class="card-text">Moro sozinho e estou alugando os quartos para estudantes</p>
+        <h6>2 quartos<span>- Belo Horizonte</span> </h6>
+        <i class="card-anuncio">R$ 300,00</i>
+        <br>
+        <a href="#" class="btn btn-primary">Fiquei Interessado!</a><br>
+      </div>
+    </div>
+
+    
+  </section>
+  
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary me-md-2 btn-mais" type="button">Carregar mais</button>
+    
+    
+  </div>
+  <br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h4 class="title-1">Alugar bem, sem complicação e fiador</h4>
+        <br>
+        <p style="font-size: 28px;">Selecione os imóveis do seu jeito, agende visitas online, negocie com a galera e crie um perfil para conhecer seus futuros colegas
+        </p>
+        <button type="button" class="btn btn-primary btn-lg">Crie seu perfil</button>
+      </div>
+      <div class="col-6">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          
-        </div>
-        <form class="container-fluid justify-content-end btn-login">
-            <button class="btn btn-outline-success me-2" type="button">Entrar</button>
-            <button class="btn btn-outline-success me-2" type="button">Cadastre-se</button>
-            
-          </form>
-      </nav>
-
-      <header>
-
-        <!-- Primeira DIV -BUSCA POR CIDADE... -->
-
-        <div class="first">
-            <div class="encontrar">
-                <h2>Encontre uma galera para dividir o aluguel</h2>
-
-                <input type="text" placeholder="Buscar por cidade">
-                <input type="text" placeholder="Bairro">
-                <input type="text" placeholder="Alugue até">
-                
-                <div class="btn-group">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Número de quartos
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>5+</li>
-                      <li>4</li>
-                      <li>3</li>
-                      <li>2</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                <button>Buscar imóveis</button>
-                
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/casa1.jpg" class="d-block w-100" alt="...">
             </div>
-            
+            <div class="carousel-item">
+              <img src="img/ad_4120_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/foto-1-de-casa-com-3-quartos-a-venda-110m-em-vila-cloris-belo-horizonte.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="avaliacoes">
+    <h3 class="title-av">Avaliações</h3>
+    <br>
+    <h5 class="title-av"><i>Relatos de Usuários</i></h5>
+    <br>
+    <div class="comentario-avaliacoes">
+      <p>Encontrei um quarto de forma muito fácil e prática.
+        <br>
+        -Marcos Marcos
+      </p>
+      <p>Site confiável e bem simples de usar!
+        <br>
+        -Lucas Lucas
+      </p>
+      <p>Só tive boas experiências, e recomendo muito!
+        <br>
+        -João João
+      </p>
+    </div>
+  </section>
+
+  <section class="buscar-imoveis">
+    <h4>Buscar imóveis</h4>
+    <nav class="navbar ">
+      <div class="container-fluid justify-content-md-center">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </nav>
+  </section>
 
 
-      </header>
+  <footer>
+    <h4>Todos os direitos reservados - 2022 ©</h4>
+    <ul>
+      <li>Ana Gabriela</li>
+      <li>André Ecidir </li>
+      <li>João Gabriel </li>
+      <li>Joao Vitor</li>
+      <li>Marcos Rocha </li>
+      <li>Vitor Borges  </li>
+    </ul>
+  </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
