@@ -131,7 +131,7 @@
         msgError.innerHTML = ''
         
         setTimeout(()=>{
-            window.location.href = 'http://127.0.0.1:5500/TIAU/log/login.html'
+            window.location.href = 'http://127.0.0.1:5500/codigo/Login%20e%20Cadastro/Login/login.html'
         }, 3000)
       
         
