@@ -74,6 +74,9 @@ span i{
 .card {
     width: 33vw;
 }
+.card-body{
+    color: black;
+}
 
 .title-1{
     font-size: 40px;
