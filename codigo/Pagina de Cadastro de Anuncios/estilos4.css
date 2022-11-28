@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dabe8c;
+    color: white !important;
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    background-color: #3a3939 !important;
+    
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1ce90;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+    flex-flow: column wrap;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a3939;
+    padding: 3rem;
+}
+h1{
+    font-size: 40px;
+    color: white !important;
+}
+.title > h1{
+    color: white !important;
+}
+.imageContainer p{
+    font-size: 38.5px;
+}
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ h1{
+    color: #2D2D2D !important;
+}
+#label{
+    color: white;
+}
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #e4ba6e;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.3rem 0;
+    padding: 0.4rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #e4ba6e;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #e4ba6e;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #ffa600;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
+
+
+#quartos{
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background-color: white;
+    /* Imagem de fundo (Seta) */
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 200px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 45px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    
+}
+
+#quartos{
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+    /* Imagem de fundo (Seta) */
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 200px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 45px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #e4ba6e;
+    border-radius: 10px;
+    
+}
+
+#banheiros{
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 200px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 45px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #e4ba6e;
+    border-radius: 10px;
+    
+}
+#file{
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 200px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 45px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #e4ba6e;
+    border-radius: 10px;
+    
+}
+
+.navbar-nav{
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    
+  
+}
+.nav-link{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+
+.gender-title h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #e4ba6e;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
