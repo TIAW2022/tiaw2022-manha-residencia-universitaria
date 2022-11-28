@@ -59,7 +59,7 @@ function imprimeDados(){
 
     for( i=0; i< objDados.anuncio.length ; i++){
         strHtml += `<div class="card" style="width: 200vh;" >
-        <img src="/codigo/Home/img/casa1.jpg" style="width: 200px" class="card-img-top" alt="...">
+        <img src="/codigo/Anuncios-cadastrados/casa1.jpg" style="width: 200px" class="card-img-top" alt="...">
       
         <div id="tela" class="card-body" >
           <h5 class="card-title">${objDados.anuncio[i].titulo}</h5>
