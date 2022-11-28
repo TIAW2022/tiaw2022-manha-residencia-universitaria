@@ -8,35 +8,148 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Residência Universitária</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f030e38271.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+   <style>
+    :root{
+        --color-white: #fff;
+        --color-dark1: rgb(39, 39, 39);
+        --color-dark2: #2d2d2d;
+        --color-dark3: #414141;
+        --color-dark4: #1c1c1c;
+        --color-dark5: #343434;
+        --color-purple: #ffa600;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--color-dark1);
+        color: var(--color-white);
+    }
+    .img_logo_header{
+      width: 70px;
+              background-color: #ffa600;
+              border-radius: 5px;
+          }
+    .header,
+    .navigation_header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .header{
+        background-color: var(--color-dark2);
+        justify-content: space-between;
+        padding: 0 10%;
+        height: 3.5em;
+        box-shadow: 1px 1px 4px var(--color-dark4);
+    }
+    .navigation_header{
+        gap: 3em;
+        z-index: 2;
+    }
+    .content{
+        padding-top: 5em;
+        text-align: center;
+        height: 100vh;
+        transition: 1s;
+    }
+    .navigation_header a{
+        text-decoration: none;
+        color: var(--color-purple);
+        transition: 1s;
+        font-weight: bold;
+    }
+    .navigation_header a:hover{
+        color: var(--color-white);
+    }
+    .active{
+        background: var(--color-dark3);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .btn_icon_header{
+        background: transparent;
+        border: none;
+        color: var(--color-white);
+        cursor: pointer;
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        .navigation_header{
+            position: absolute;
+            flex-direction: column !important;
+            top: 0;
+            background: var(--color-dark5);
+            height: 100%;
+            width: 35vw;
+            padding: 1em;
+            animation-duration: 1s;
+            margin-left: -100vw;
+        }
+        .btn_icon_header{
+            display: block;
+        }
+    }
+    @keyframes showSidebar {
+        from {margin-left: -100vw;}
+        to {margin-left: -10vw;}
+    }
+</style>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
-                  class="d-inline-block align-text-top">
+    <div class=" col-12">
+        <nav>
+            <div class="header" id="header">
+                <button onclick="toggleSidebar()" class="btn_icon_header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+                <div class="logo_header">
+                    <img src="/codigo/Login e Cadastro/Cadastrar/img/Ativo 2.png" alt="Logo GN" class="img_logo_header">
+                </div>
+                <div class="navigation_header" id="navigation_header">
+                    <button onclick="toggleSidebar()" class="btn_icon_header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                    <a href="/codigo/Home/index.html" >Home</a>
+                    <a href="/codigo/Anuncios-cadastrados/index2.html">Buscar imóveis</a>
+                    <a href="/codigo/Pagina de Cadastro de Anuncios/index.html" class="active">Anunciar</a>
+                    <div class="btn-group" role="group" aria-label="Grupo de botões com dropdown aninhado">
         
-              </a>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#">Bucar imóveis</a>
-                  <a class="nav-link" href="#">Anunciar</a>
-                  <a class="nav-link" href="#">Sobre</a>
+        
+                      <div class="btn-group" role="group" style="bottom: 10px;">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Entrar
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                          <a class="dropdown-item" href="/codigo/Login e Cadastro/Login/login.html">Login</a>
+                          <a class="dropdown-item" href="/codigo/Login e Cadastro/Cadastrar/cadastro.html">Cadastro</a>
+                        </div>
+                      </div>
+                    </div>
+        
         
         
                 </div>
-        
-              </div>
-        
             </div>
-            <form class="container-fluid justify-content-end btn-login">
-              <button class="btn btn-outline-success me-2" type="button">Entrar</button>
-              <button class="btn btn-outline-success me-2" type="button">Cadastre-se</button>
+        </nav>
+    </div>
         
-            </form>
-          </nav> 
     <div class="corpo">
         <div class="container">
         
@@ -48,26 +161,26 @@
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
-                            <h1>Anuncie seu imóvel ou um <br>
-                                lugar que você queira dividir</h1>
+                            <h1> Anuncie aqui!
+                               </h1>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="firstname">Primeiro Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                            <div class="input-box">
+                                <label for="text">Titulo do Anúncio</label>
+                                <input type="text" id="tituloAnuncio" name="tamanho" required/>
+                            </div>
+                            <label for="firstname">Descrição</label>
+                            <input id="descricao" type="text" name="firstname"  required>
                         </div>
                         <div class="input-box">
-                            <label for="lastname">Sobrenome</label>
-                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                            <label for="lastname">Valor da locação</label>
+                            <input id="valor" type="text" name="lastname" placeholder="R$" required>
                         </div>
                         <div class="input-box">
                             <label for="password">Endereço</label>
-                            <input type="text" id="endereço" name="endereço" required/>
-                        </div>
-                        <div class="input-box">
-                            <label for="email">Tamanho</label>
-                            <input type="text" id="tamanho" name="tamanho" required/>
+                            <input type="text" id="endereco" name="endereço" required/>
                         </div>
                         <div class="input-box">
                             <label for="number">N° Quartos</label>
@@ -116,7 +229,7 @@
                         </div>
                     </div>
                     <div class="continue-button">
-                        <button type="submit" class="btn" >Continuar</button>
+                        <a href="/codigo/Anuncios-cadastrados/index2.html"><button id="BtnContinuar"type="submit" class="btn" >Continuar</button></a>
                     </div>
                 </form>
             </div>
@@ -125,6 +238,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+
+
+<script src="incluir.js"></script>
+
+
+
 </body>
 
 </html>
