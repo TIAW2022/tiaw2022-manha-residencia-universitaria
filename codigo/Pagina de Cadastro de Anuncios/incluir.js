@@ -39,7 +39,7 @@ function incluirAnuncio(){
         descricao: descricao
     };
 
-    objDados.anuncio.push(novoAnuncio);
+    objDados.anuncio.unshift(novoAnuncio);
 
 
     // salvar os dados no localStorage novamente

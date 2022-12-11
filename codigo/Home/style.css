@@ -51,12 +51,14 @@ span i{
     padding: 50px;
     text-align: center;
     margin: 10px;
+    justify-content: center;
     
     
 }
 
 .texto-informativo{
-  
+    
+    
 }
 
 
@@ -64,11 +66,16 @@ span i{
     font-size: 30px;
     margin-bottom: 8px;
 }
+.h5-proximos{
+    margin-left: 141px;
+    font-weight: 800;
+}
 
 .imoveis-proximos{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     margin: 20px;
+    justify-content: center;
 }
 
 .card {
@@ -83,7 +90,8 @@ span i{
     text-align: start;
 }
 .btn-mais{
-    margin-right: 30px;
+    
+    
 }
 
 .avaliacoes{

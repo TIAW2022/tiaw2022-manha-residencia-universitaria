@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro_De_Anuncio</title>
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="registro_de_anuncio.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <img src="Logohouse.png" alt="Logo GN" class="img_logo_header">
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="/codigo/Home/index.html" >Home</a>
+            <a href="/codigo/Anuncios-cadastrados/index2.html">Buscar imóveis</a>
+            <a href="/codigo/Pagina de Cadastro de Anuncios/registro_de_anuncio.html" class="active">Anunciar</a>
+            <div class="btn-group" role="group" aria-label="Grupo de botões com dropdown aninhado">
+              
+            
+              <div class="btn-group" role="group" style="bottom: 10px;">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Entrar
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="/codigo/Login e Cadastro/Login/login.html">Login</a>
+                  <a class="dropdown-item" href="/codigo/Login e Cadastro/Cadastrar/cadastro.html">Cadastro</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div id="mask"></div>        
+        <h2>Anuncie seu <span>imóvel</span> ou um lugar que você queira dividir!</h2>
+        <section id="anuncio">
+            <div class="imagePreview">
+                <img id="imagePreviewImg" src="" alt="Preview">
+                <input id="imagePreviewInput" type="file">
+            </div>
+            <div class="descricao">
+                <div class="grid1">
+                    <div class="labelInput">
+                        <label for="titulo">Título</label>
+                        <input id="titulo" type="text">
+                    </div>
+                </div>
+
+                <div class="grid2">
+                    <div class="labelInput span1">
+                        <label for="tamanho">Tamanho</label>
+                        <input id="tamanho" type="number" placeholder="m²">
+                    </div>                
+    
+                    <div id="valorWrapper" class="labelInput span1">
+                        <label for="valor">Valor</label>
+                        <input id="valor" type="number" placeholder="R$">
+                    </div>
+                </div>
+
+                <div class="grid5">
+                    <div class="labelInput span1">
+                        <label for="cep">Cep</label>
+                        <input id="cep" type="text" placeholder="00000-000" minlength="9" maxlength="9" onkeyup="verificarCep()">
+                    </div>
+
+                    <div class="labelInput span1">
+                        <label for="numero">Número</label>
+                        <input id="numero" type="text" placeholder="255">
+                    </div>
+
+                    <div class="labelInput span3">
+                        <label for="endereco">Endereco</label>
+                        <input id="endereco" type="text" placeholder="Rua Walter Ianni" disabled>
+                    </div>
+                </div>                
+
+                <div class="grid5">
+                    <div class="labelInput span2">
+                        <label for="bairro">Bairro</label>
+                        <input id="bairro" type="text" placeholder="São Gabriel" disabled>
+                    </div>
+
+                    <div class="labelInput span2">
+                        <label for="cidade">Cidade</label>
+                        <input id="cidade" type="text" placeholder="Belo Horizonte" disabled>
+                    </div>
+
+                    <div class="labelInput span1">
+                        <label for="estado">Estado</label>
+                        <input id="estado" type="text" placeholder="MG" disabled>
+                    </div>
+                </div>                
+                
+                <div class="grid1">
+                    <div class="labelInput">
+                        <label for="descricao">Descricao do imóvel</label>
+                        <textarea id="descricao" cols="30" rows="10"></textarea>
+                    </div>
+                </div>                
+    
+                <button onclick="registrarAnuncio()">Registrar</button>
+            </div>
+        </section>
+    </main>    
+
+    <script>
+        var header           = document.getElementById('header');
+        var navigationHeader = document.getElementById('navigation_header');
+        var content          = document.getElementById('content');
+        var showSidebar      = false;
+    
+        function toggleSidebar()
+        {
+            showSidebar = !showSidebar;
+            if(showSidebar)
+            {
+                navigationHeader.style.marginLeft = '-10vw';
+                navigationHeader.style.animationName = 'showSidebar';
+                content.style.filter = 'blur(2px)';
+            }
+            else
+            {
+                navigationHeader.style.marginLeft = '-100vw';
+                navigationHeader.style.animationName = '';
+                content.style.filter = '';
+            }
+        }
+    
+        function closeSidebar()
+        {
+            if(showSidebar)
+            {
+                showSidebar = true;
+                toggleSidebar();
+            }
+        }
+    
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth > 768 && showSidebar) 
+            {  
+                showSidebar = true;
+                toggleSidebar();
+            }
+        });
+    </script>
+
+    <script>
+        let anuncios = []
+        const reader = new FileReader();
+
+        if(localStorage.getItem("anuncios") != null){
+            anuncios = JSON.parse(localStorage.getItem("anuncios"));
+        }
+
+        document.getElementById("imagePreviewInput").addEventListener("change", function(){
+            reader.addEventListener("load", function(){
+                document.getElementById("imagePreviewImg").src = reader.result;
+                console.log("Preview carregada");                
+            });
+
+            reader.readAsDataURL(this.files[0])
+        });
+
+        function registrarAnuncio(){
+            if(
+                document.getElementById("titulo").value.length > 10 &&
+                document.getElementById("tamanho").value.length > 2 &&
+                document.getElementById("valor").value.length > 3 &&
+                document.getElementById("cep").value.length == 9 &&
+                document.getElementById("numero").value.length > 1 &&
+                document.getElementById("descricao").value.length > 20
+            ){
+                let novoAnuncio = {};
+                inputs = document.querySelectorAll(".descricao input, .descricao textarea")
+
+                for(let i = 0; i < inputs.length; i++){
+                    novoAnuncio[inputs[i].id] = inputs[i].value;
+                }
+
+                novoAnuncio["imagem"] = document.querySelector(".imagePreview img").src;
+
+                anuncios.push(novoAnuncio);
+                localStorage.setItem("anuncios", JSON.stringify(anuncios));
+                alert("Anúncio cadastrado!")
+            }
+            
+            else{
+                alert("Preencha todos os campos corretamente");
+            }            
+        }
+
+        let locked = false;
+        function verificarCep(){
+            let cepInput = document.getElementById("cep");
+            if(cepInput.value.length == 8 && !isNaN(cepInput.value)){
+                cepInput.value = cepInput.value.substring(0,5) + "-" + cepInput.value.substring(5)
+            }
+
+            if(cepInput.value.length == 9 && locked == false){
+                locked = true;
+
+                xhttp = new XMLHttpRequest();
+
+                xhttp.onload = function(){
+                    response = JSON.parse(xhttp.responseText);
+
+                    document.getElementById("endereco").value = response.address;
+                    document.getElementById("bairro").value = response.district;
+                    document.getElementById("cidade").value = response.city;                    
+                    document.getElementById("estado").value = response.state;
+                }
+
+                xhttp.open("GET", `https://cdn.apicep.com/file/apicep/${cepInput.value}.json`);
+                xhttp.send()
+            }
+
+            else if(cepInput.value.length < 9){
+                locked = false;
+
+                document.getElementById("endereco").value = "";
+                document.getElementById("bairro").value = "";
+                document.getElementById("cidade").value = "";
+                document.getElementById("estado").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
