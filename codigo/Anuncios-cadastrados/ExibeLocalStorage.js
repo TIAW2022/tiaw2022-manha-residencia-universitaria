@@ -17,7 +17,7 @@ function imprimeDados(){
         <div id="tela" class="card-body" >
           <h5 class="card-title">${objDados1[i].titulo}</h5>
           <p class="card-text">${objDados1[i].descricao}</p>
-          <h6> Quartos <span> - ${objDados1[i].endereco}</span> </h6>
+          <h6>Endereço: <span>  ${objDados1[i].endereco}</span> </h6>
           <i class="card-anuncio">R$ ${objDados1[i].valor} </i>
           <br>
           <a href="#" class="btn btn-primary">Fiquei Interessado!</a><br>

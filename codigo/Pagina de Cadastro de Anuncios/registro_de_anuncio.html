@@ -179,11 +179,11 @@
 
         function registrarAnuncio(){
             if(
-                document.getElementById("titulo").value.length > 10 &&
-                document.getElementById("tamanho").value.length > 2 &&
-                document.getElementById("valor").value.length > 3 &&
+                document.getElementById("titulo").value.length >= 8 &&
+                document.getElementById("tamanho").value.length >= 2 &&
+                document.getElementById("valor").value.length >= 3 &&
                 document.getElementById("cep").value.length == 9 &&
-                document.getElementById("numero").value.length > 1 &&
+                document.getElementById("numero").value.length >= 1 &&
                 document.getElementById("descricao").value.length > 20
             ){
                 let novoAnuncio = {};
