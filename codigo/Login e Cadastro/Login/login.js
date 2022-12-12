@@ -43,7 +43,7 @@ bt2.onclick = function entrar(){
     })
      
     if(usuario.value == userValid.user && senha.value == userValid.senha){
-      window.location.href = 'https://www.google.com'
+      window.location.href = '/codigo/Home/index.html'
       
       let mathRandom = Math.random().toString(16).substr(2)
       let token = mathRandom + mathRandom
