@@ -118,7 +118,8 @@
         {
           nomeCad: nome.value,
           userCad: email.value,
-          senhaCad: senha.value
+          senhaCad: senha.value,
+          celularCad: phone.value
         }
         )
         

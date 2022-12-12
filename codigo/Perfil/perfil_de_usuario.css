@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h3{
+    font-size: 2em;
+    border-bottom: 2px solid lightblue;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+header{
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 8px 16px;
+}
+
+header nav a{
+    transition: 200ms;
+}
+
+header nav a:hover{
+    color: orange;
+}
+
+.flexStartCenter{
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.flexStartEnd{
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-end;
+}
+
+.flexStartColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flexCenterColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+#modal > div{
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 1vw;
+    padding: 32px;
+}
+
+#modal > div > div{
+    gap: 8px;
+}
+
+main{
+    
+}
+
+#perfilHero{
+    width: 100%;
+    height: 50vh;
+    max-height: 360px;
+    background-image: url("img/pexels-eberhard-grossgasteiger-844297.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;    
+    padding: 16px;    
+}
+
+#perfilHero #perfilImagem{    
+    width: 80px;
+    height: 80px;
+    border: 4px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#perfilHero .nomeLogado{
+    font-size: 2em;
+}
+
+#perfilHero .emailLogado{
+    font-size: 1.5em;
+}
+
+#perfilHero .celularLogado{
+    font-size: 1.5em;
+}
+
+#infoContainer{
+    width: 100%;
+    padding: 0px 16px;
+    gap: 32px;
+}
+
+#infoContainer img{
+    cursor: pointer;
+}

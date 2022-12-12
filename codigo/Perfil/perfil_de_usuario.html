@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfil_de_usuario</title>
+
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="perfil_de_usuario.css">
+</head>
+
+<body onload="carregarDados()">
+    <div id="modal" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content">
+            <div class="w3-container flexStartColumn">
+                <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <label id="modalLabel" for="modalInput"></label>
+                <input id="modalInput" type="text">
+                <button onclick="salvarModal()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="login.html">Sair</a>
+        </nav>
+    </header>
+
+    <main class="flexCenterColumn">
+        <section id="perfilHero" class="flexStartEnd">
+            <div class=""></div>
+            <img id="perfilImagem" src="img/person.svg" alt="foto de perfil">
+            <div class="flexStartColumn">
+                <span class="nomeLogado"></span>
+                <span class="emailLogado"></span>
+                <span class="celularLogado"></span>
+            </div>
+        </section>
+
+        <section id="infoContainer" class="flexStartColumn">
+            <div id="trocarImagemPerfil" class="info">
+                <h3>Imagem de Perfil</h3>
+                <input type="file" id="trocarImagemPerfilInput">
+            </div>
+            <div id="escola" class="info">
+                <h3>Escola<img src="img/pencil.svg" alt="" onclick="abrirModal('escola')"></h3>
+                <span>EscolaTeste</span>
+            </div>
+
+            <div id="endereco" class="info">
+                <h3>Endereco<img src="img/pencil.svg" alt="" onclick="abrirModal('endereco')"></h3>
+                <span>enderecoTeste</span>
+            </div>
+            
+        </section>
+    </main>    
+
+    <script src="perfil_de_usuario.js"></script>
+</body>
+</html>

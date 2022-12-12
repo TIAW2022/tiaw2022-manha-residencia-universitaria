@@ -3,11 +3,19 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header{
+    background-color: rgb(255,255,255);
+    
+    background-image: url(https://img.freepik.com/vetores-premium/vetor-de-personagem-de-estudante-pessoas-com-livros-e-mochilas_507816-667.jpg?w=740);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /*
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,0.9752275910364145) 59%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,0.9752275910364145) 59%);*/
 }
 
 span i{
@@ -33,16 +41,16 @@ span i{
 }
 
 .encontrar{
-    
+    color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 40%;
-    height: 350px;
+    justify-content: end;
+    max-width: 25%;
+    height: 150px;
     gap: 10px;
-    margin-left: 30px;
+    margin-left: 50px;
     padding: 15px;
-    text-align: center;
+    text-align: top;
 }
 
 .textos{
@@ -79,7 +87,7 @@ span i{
 }
 
 .card {
-    width: 33vw;
+    max-width: 33vw;
 }
 .card-body{
     color: black;
@@ -119,6 +127,7 @@ footer{
     text-align: center;
     margin-top: 100px;
     background-color: rgb(144, 144, 247);
+    padding: 50px;
 }
 
 ul li{
