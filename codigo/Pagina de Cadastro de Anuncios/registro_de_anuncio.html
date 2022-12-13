@@ -60,6 +60,12 @@
                         <input id="titulo" type="text">
                     </div>
                 </div>
+                <div class="grid1">
+                    <div class="labelInput">
+                        <label for="zap">Whatsapp</label>
+                        <input id="zap" type="number" placeholder="(99)99999-9999">
+                    </div>
+                </div>
 
                 <div class="grid2">
                     <div class="labelInput span1">
@@ -81,7 +87,7 @@
 
                     <div class="labelInput span1">
                         <label for="numero">Número</label>
-                        <input id="numero" type="text" placeholder="255">
+                        <input id="numero" type="text">
                     </div>
 
                     <div class="labelInput span3">
@@ -184,6 +190,7 @@
                 document.getElementById("valor").value.length >= 3 &&
                 document.getElementById("cep").value.length == 9 &&
                 document.getElementById("numero").value.length >= 1 &&
+                document.getElementById("zap").value.length == 11 &&
                 document.getElementById("descricao").value.length > 20
             ){
                 let novoAnuncio = {};

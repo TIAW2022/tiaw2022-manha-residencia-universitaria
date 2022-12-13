@@ -20,7 +20,8 @@ function imprimeDados(){
           <h6>Endereço: <span>  ${objDados1[i].endereco}</span> </h6>
           <i class="card-anuncio">R$ ${objDados1[i].valor} </i>
           <br>
-          <a href="#" class="btn btn-primary">Fiquei Interessado!</a><br>
+          <a href="https://api.whatsapp.com/send/?phone=%2B55${objDados1[i].zap}&text&type=phone_number&app_absent=0"
+           class="btn btn-primary" style = "background-color:#26D367">Entar em contato</a><br>
         </div>
       </div>`
     }
