@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: dimgray;
+}
+
+
+
+.grid1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+}
+
+.grid2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.grid4{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.grid5{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.span1{
+    grid-column: span 1;
+}
+
+.span2{
+    grid-column: span 2;
+}
+
+.span3{
+    grid-column: span 3;
+}
+
+
+
+main{
+    width: 100%;
+    position: relative;
+    background-image: url("pexels-pixabay-271816.jpg");
+    /*<!--Photo by Pixabay: https://www.pexels.com/photo/apartment-architecture-bookcase-bookshelves-271816/*/
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding: 64px;
+}
+
+main > #mask{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, transparent, black);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+h2{
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    width: auto;
+    display: block;
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: normal;
+    position: relative;
+    margin: 0px auto;
+    padding: 16px;
+    z-index: 2;
+}
+
+h2 > span{
+    text-decoration: underline var(--color-purple);
+}
+
+#anuncio{
+    width: 100%;
+    max-width: 992px;
+    background-color: rgba(255, 255, 255, 0.66);
+    position: relative;
+    border-radius: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    z-index: 2;
+}
+
+#anuncio > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+#anuncio > .imagePreview{
+    width: 100%;
+}
+
+#anuncio > .imagePreview input{
+    width: 100%;
+}
+
+#anuncio > .imagePreview > img{
+    width: 100%;
+    max-width: 640px;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+
+#anuncio > .descricao{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+#anuncio > .descricao .labelInput{    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#anuncio > .descricao > div .labelInput input{
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 1000vw;
+    outline: 0px;
+    border: 0px;
+    padding: 5px;
+    transition: 200ms;
+}
+
+#anuncio > .descricao > div .labelInput input:focus{
+    outline: 2px solid var(--color-purple);
+}
+
+#anuncio > .descricao > div .labelInput textarea{
+    width: 100%;
+    border: 0px;
+    border-radius: 1vw;
+    padding: 8px;
+    resize: none;
+}
+
+#anuncio > .descricao > div .labelInput textarea:focus{
+    outline: 2px solid var(--color-purple);
+}
+
+#anuncio > .descricao button{
+    width: 100%;
+    max-width: 360px;
+    grid-column: 1/-1;
+    border: 0px;
+    border-radius: 100vw;
+    outline: 0px;
+    cursor: pointer;
+    padding: 8px;
+    transition: 300ms;
+}
+
+#anuncio > .descricao button:focus{
+    background-color: var(--color-purple);
+}
+
+
+
+@media (max-width: 768px) {
+    main{
+        padding: 8px;
+    }
+
+    #anuncio{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    #anuncio > .descricao > div > .labelInput{
+        grid-column: 1/-1;
+    }
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(255,255,255);
+    
+    background-image: url(https://img.freepik.com/vetores-premium/vetor-de-personagem-de-estudante-pessoas-com-livros-e-mochilas_507816-667.jpg?w=740);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /*
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,0.9752275910364145) 59%);*/
+}
+
+span i{
+    font-size: 35px;
+    margin-bottom: 10px;
+    padding-top: 32px;
+}
+.navbar-nav{
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    
+}
+.btn-login{
+    margin-right: 50px;
+}
+
+.first{
+    
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.encontrar{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-width: 25%;
+    height: 150px;
+    gap: 10px;
+    margin-left: 50px;
+    padding: 15px;
+    text-align: top;
+}
+
+.textos{
+    display: flex;
+    gap: 10px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+    
+    
+}
+
+.card-anuncio {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.h5-proximos{
+    margin-left: 141px;
+    font-weight: 800;
+}
+
+.imoveis-proximos{
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.card {
+    max-width: 30vw;
+}
+.card-body{
+    color: black;
+}
+
+.title-1{
+    font-size: 40px;
+    text-align: start;
+}
+
+.avaliacoes{
+    margin-top: 60px;
+}
+
+.title-av{
+    text-align: center;
+}
+
+.comentario-avaliacoes{
+    display: flex;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+}
+
+.buscar-imoveis{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgb(144, 144, 247);
+    padding: 50px;
+}
+
+ul li{
+    list-style: none;
+    font-size: small;
+    text-align: center;
+}
